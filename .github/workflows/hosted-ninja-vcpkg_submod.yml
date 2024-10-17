@@ -32,14 +32,14 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest]
-#    env:
+    env:
     #
     # [OPTIONAL] Define the vcpkg's triplet
     # you want to enforce, otherwise the default one
     # for the hosting system will be automatically
     # choosen (x64 is the default on all platforms,
     # e.g. x64-osx).
-#      VCPKG_TARGET_TRIPLET: ${{ matrix.triplet }}
+      VCPKG_TARGET_TRIPLET: x64-windows-static
 
     steps:
       - uses: actions/checkout@v4
