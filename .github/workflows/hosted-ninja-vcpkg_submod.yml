@@ -31,17 +31,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - os: ubuntu-latest
-            triplet: x64-linux
-          - os: windows-latest
-            triplet: x64-windows-static
-    env:
+        os: [windows-latest]
+#    env:
     #
-    # [OPTIONAL] Define the vcpkg's triplet 
-    # you want to enforce, otherwise the default one 
+    # [OPTIONAL] Define the vcpkg's triplet
+    # you want to enforce, otherwise the default one
     # for the hosting system will be automatically
-    # choosen (x64 is the default on all platforms, 
+    # choosen (x64 is the default on all platforms,
     # e.g. x64-osx).
       VCPKG_TARGET_TRIPLET: ${{ matrix.triplet }}
 
