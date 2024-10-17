@@ -39,7 +39,7 @@ jobs:
     # for the hosting system will be automatically
     # choosen (x64 is the default on all platforms,
     # e.g. x64-osx).
-      VCPKG_TARGET_TRIPLET: x64-windows-static
+      VCPKG_DEFAULT_TRIPLET: x64-windows-static
 
     steps:
       - uses: actions/checkout@v4
