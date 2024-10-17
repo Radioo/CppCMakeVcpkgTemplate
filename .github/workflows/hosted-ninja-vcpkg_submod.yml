@@ -39,7 +39,7 @@ jobs:
     # for the hosting system will be automatically
     # choosen (x64 is the default on all platforms,
     # e.g. x64-osx).
-      VCPKG_TARGET_TRIPLET: ${{ matrix.triplet }}
+#      VCPKG_TARGET_TRIPLET: ${{ matrix.triplet }}
 
     steps:
       - uses: actions/checkout@v4
