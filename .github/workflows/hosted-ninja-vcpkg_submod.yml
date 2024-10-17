@@ -34,8 +34,6 @@ jobs:
         include:
           - os: ubuntu-latest
             triplet: x64-linux
-          - os: macos-latest
-            triplet: x64-osx
           - os: windows-latest
             triplet: x64-windows-static
     env:
@@ -45,7 +43,7 @@ jobs:
     # for the hosting system will be automatically
     # choosen (x64 is the default on all platforms, 
     # e.g. x64-osx).
-      VCPKG_DEFAULT_TRIPLET: ${{ matrix.triplet }}
+      VCPKG_TARGET_TRIPLET: ${{ matrix.triplet }}
 
     steps:
       - uses: actions/checkout@v4
