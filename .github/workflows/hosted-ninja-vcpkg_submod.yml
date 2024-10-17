@@ -32,6 +32,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
+        triplet: [x64-linux, x64-osx, x64-windows-static]
     #env:
     #
     # [OPTIONAL] Define the vcpkg's triplet 
@@ -39,7 +40,7 @@ jobs:
     # for the hosting system will be automatically
     # choosen (x64 is the default on all platforms, 
     # e.g. x64-osx).
-    # VCPKG_DEFAULT_TRIPLET: ${{ matrix.triplet }} 
+      VCPKG_DEFAULT_TRIPLET: ${{ matrix.triplet }}
 
     steps:
       - uses: actions/checkout@v4
