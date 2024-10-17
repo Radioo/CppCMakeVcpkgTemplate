@@ -33,7 +33,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         triplet: [x64-linux, x64-osx, x64-windows-static]
-    #env:
+    env:
     #
     # [OPTIONAL] Define the vcpkg's triplet 
     # you want to enforce, otherwise the default one 
